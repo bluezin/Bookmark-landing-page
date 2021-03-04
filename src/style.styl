@@ -1,0 +1,348 @@
+@import url("./responsive.css");
+
+:root 
+  --softBlue: hsl(231, 69%, 60%)
+  --softRed: hsl(0, 94%, 66%)
+  --grayishBlue: hsl(229, 8%, 60%)
+  --veryDarkBlue: hsl(229, 31%, 21%)
+
+body 
+   font-family 'Rubik', sans-serif;
+   color var(--veryDarkBlue)
+   margin 0
+   text-align center
+   padding 0
+   overflow-x hidden
+ // section => menu
+p 
+  color var(--grayishBlue)
+  font-size 14px
+
+li 
+ list-style none
+
+ul
+ padding 20px
+ .li-menu
+  border-top 1px solid var(--grayishBlue)
+  padding 18px
+
+.menu 
+  display none
+  position absolute
+  top 100%
+  background-color rgba(47, 53, 79, 0.9)
+  left 0
+  right 0
+  height 100vh
+  &-open
+    user-select none
+    width 20px 
+    height 20px
+    display inline-flex
+    background url('/src/images/icon-hamburger.svg')  no-repeat
+    background-size contain
+    cursor pointer
+   a 
+    color white
+    text-decoration none
+    display block
+    text-transform uppercase
+    font-weight bold
+    letter-spacing 2px
+
+  @media screen and (min-width 1000px)
+    display block
+    position initial
+    height auto
+    background-color white
+    &-open
+      display none 
+    a 
+     color black
+     font-size 12px
+     &:hover 
+       color var(--softRed)
+    ul
+     display flex
+     padding 0
+     align-items center 
+     .li-menu
+      border none
+      padding 0 20px
+    .div-icon 
+     display none
+    .login-button 
+      background-color var(--softRed)
+      padding 10px 23px
+      color white
+      &:hover
+        border 2px solid var(--softRed)
+        background-color white
+        color var(--softRed)
+
+
+.logo 
+   background url("/src/images/logo-bookmark.svg") no-repeat
+   width 200px 
+   height 30px
+
+.menu-checkbox
+  @media screen and (max-width 1000px)
+   &:checked 
+    & ~ .div-head 
+     background-color rgba(47, 53, 79, .9)
+     & .menu
+         display block
+     & .menu-open
+      background url('/src/images/icon-close.svg')  no-repeat
+     & .logo 
+      background url("/src/images/logo-bookmark-white.svg") no-repea t
+
+
+.div-icon 
+  position absolute
+  bottom 100px
+  left 0
+  right 0
+  cursor pointer
+
+.icon-twitter 
+  margin-left 30px
+
+.login-button
+   background-color transparent
+   font-weight 800
+   padding 10px
+   border 2px solid
+   border-radius 5px
+
+.button-no-util
+   color black
+   background-color #f5f5f5
+   box-shadow 0 2px 7px var(--grayishBlue)
+   &:hover
+     color: #4b4c54
+     background-color: white
+     border: 2px solid #4b4c54
+
+
+// section => feautures
+.special
+  display none
+  flex-direction column
+  img 
+   margin-top 50px auto
+   max-width 100%
+  .div-img-global 
+    margin 20px 30px
+  .div-information-global 
+    margin auto 30px
+  @media screen and (min-width 900px)
+    flex-direction row
+    align-items center
+    justify-content center
+    max-width 750px
+    margin auto
+    text-align left
+    img 
+     margin-top 0
+    .div-img-global
+      margin-right 6em
+    .div-information-global
+      margin 0
+.link
+  &-feautures
+    padding 20px
+    border-bottom 2px solid #e7e8ee
+    position relative
+    label 
+      &:after
+        content ""
+        position absolute
+        bottom 0px
+        width 50%
+        left 0   
+        transform translateX(50%)
+        border-bottom 5px solid var(--softRed)
+        display none
+  &-add 
+    border-top 2px solid #e7e8ee
+
+  @media screen and (min-width 500px) 
+    text-align center
+    &-feautures
+      width 230px
+      display block
+      position relative
+      label
+       &:after
+         transform translateX(0%)
+         width 100%
+    &-add
+      border-top none
+    &-ul-feautures 
+      display flex
+      justify-content center
+      align-items center
+      user-select none
+      flex-wrap wrap
+  
+
+input[id= "bookmarking"]:checked
+  & ~ .div-bookmarking
+       display flex
+
+  & ~ ul [for= "bookmarking"]:after
+       display block
+       
+input[id= "searching"]:checked
+  & ~ .div-searching
+        display flex
+  & ~ ul [for= "searching"]:after
+        display block
+       
+input[id= "sharing"]:checked
+  & ~ .div-sharing
+        display flex
+  & ~ ul [for= "sharing"]:after
+        display block
+        
+// end
+
+//section => navegators
+
+.image-ilustration
+   width 100%
+   margin-top 50px
+   
+.button-install-navegators
+  width 85%
+  padding 10px
+
+.img-navegators
+  width 70px
+  margin 13px
+  margin-top 40px
+  
+.img-bg-dots 
+  width 100%
+ 
+.add-section
+  @media screen and (min-width 700px)
+    &-firefox
+      position relative
+      top 40px
+    &-opera 
+      position relative
+      top 80px
+
+// end 
+
+// section => quesitions
+
+details 
+  padding 13px
+
+summary 
+  border-bottom 2px solid #e7e8ee
+  padding 0.8em
+  color #494d5f
+  cursor pointer
+  user-select none
+  &:focus
+    outline none
+    color var(--softRed)
+  &::-webkit-details-marker
+     color #6565ed
+     float right
+
+.div-questions 
+  text-align left
+  margin: auto 20px
+  @media screen and (min-width 500px) 
+     width 500px
+     margin auto
+
+// end 
+
+// section => formulario
+.div-form 
+  background-color #5368df
+  color white
+  padding-top 70px
+
+span 
+ text-transform uppercase
+ letter-spacing 4px
+ font-weight bold
+ font-size 1em
+
+.input-form 
+  display block
+  margin auto
+  outline none
+  width 70%
+  padding 15px
+  border-radius 6px
+  border none
+
+.h3-form 
+  font-size 1.8em
+
+.display-form 
+  @media screen and (min-width 700px) 
+    display flex
+    width 600px
+    margin auto
+    padding-bottom 10px
+    input 
+     width 240px 
+    .button-u-contact  
+     width 240px
+// footer
+
+.li-form 
+  padding 1em
+  font-size 0.6em
+  cursor pointer
+  user-select none
+
+.twitter-form 
+  margin-left 15px
+  width 1em
+
+.facebook-form 
+  width 1em
+
+.logo-other 
+  width 100px
+
+.div-footer 
+  background-color rgba(47, 53, 79, 0.9)
+  color white
+  padding-bottom 5px
+  &-form 
+    padding-top 20px
+    margin-bottom -20px
+  @media screen and (min-width: 700px)
+    display flex 
+    align-items center
+    justify-content center
+    flex-wrap wrap
+    &-form 
+      padding 0
+      margin 0
+    .ul-form 
+      text-transform uppercase
+      display flex 
+      align-items center
+      justify-content center
+      li
+       &:hover
+         color var(--softRed)
+
+    .div-footer-icons
+      position absolute
+      right 100px
+      cursor pointer
