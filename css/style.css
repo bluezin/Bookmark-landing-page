@@ -41,7 +41,7 @@ ul .li-menu {
   width: 20px;
   height: 20px;
   display: inline-flex;
-  background: url("/src/images/icon-hamburger.svg") no-repeat;
+  background: url("/images/icon-hamburger.svg") no-repeat;
   background-size: contain;
   cursor: pointer;
 }
@@ -94,7 +94,7 @@ ul .li-menu {
   }
 }
 .logo {
-  background: url("/src/images/logo-bookmark.svg") no-repeat;
+  background: url("/images/logo-bookmark.svg") no-repeat;
   width: 200px;
   height: 30px;
 }
@@ -106,10 +106,10 @@ ul .li-menu {
     display: block;
   }
   .menu-checkbox:checked ~ .div-head .menu-open {
-    background: url("/src/images/icon-close.svg") no-repeat;
+    background: url("/images/icon-close.svg") no-repeat;
   }
   .menu-checkbox:checked ~ .div-head .logo {
-    background: url("/src/images/logo-bookmark-white.svg") no-repea t;
+    background: url("/images/logo-bookmark-white.svg") no-repea t;
   }
 }
 .div-icon {
