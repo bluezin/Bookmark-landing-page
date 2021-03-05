@@ -34,7 +34,8 @@ ul
   background-color rgba(47, 53, 79, 0.9)
   left 0
   right 0
-  height 100vh
+  height 730vh
+  z-index 1
   &-open
     user-select none
     width 20px 
@@ -52,7 +53,7 @@ ul
     letter-spacing 2px
 
   @media screen and (min-width 1000px)
-    display block
+    display flex
     position initial
     height auto
     background-color white
@@ -97,12 +98,12 @@ ul
      & .menu-open
       background url('/images/icon-close.svg')  no-repeat
      & .logo 
-      background url("/images/logo-bookmark-white.svg") no-repea t
+      background url("/images/logo-bookmark-white.svg") no-repeat
 
 
 .div-icon 
   position absolute
-  bottom 100px
+  top 500px
   left 0
   right 0
   cursor pointer

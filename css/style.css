@@ -34,7 +34,8 @@ ul .li-menu {
   background-color: rgba(47,53,79,0.9);
   left: 0;
   right: 0;
-  height: 100vh;
+  height: 730vh;
+  z-index: 1;
 }
 .menu-open {
   user-select: none;
@@ -55,7 +56,7 @@ ul .li-menu {
 }
 @media screen and (min-width: 1000px) {
   .menu {
-    display: block;
+    display: flex;
     position: initial;
     height: auto;
     background-color: #fff;
@@ -109,12 +110,12 @@ ul .li-menu {
     background: url("/images/icon-close.svg") no-repeat;
   }
   .menu-checkbox:checked ~ .div-head .logo {
-    background: url("/images/logo-bookmark-white.svg") no-repea t;
+    background: url("/images/logo-bookmark-white.svg") no-repeat;
   }
 }
 .div-icon {
   position: absolute;
-  bottom: 100px;
+  top: 500px;
   left: 0;
   right: 0;
   cursor: pointer;
